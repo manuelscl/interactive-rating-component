@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="Interactive rating component to gather user feedback on support requests, featuring a simple and intuitive design.">
+ 
   <!-- Font: Overpass -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,28 +17,51 @@
   <title>Frontend Mentor | Interactive rating component</title>
 </head>
 <body>
-  <!-- Rating state start -->
+  <main>
+    <div class="rating-card card">
+      <div class="rating-card__icon">
+        <img src="./images/icon-star.svg" alt="Icon Star">
+      </div>
+      <h2 class="title">How did we do?</h2>
+      <p class="description">Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+      <form action="" class="rating-form">
+        <fieldset class="rating-form__fieldset">
+          <label class="rating-form__label" for="rating-1">
+            <input type="radio" class="rating-form__input" id="rating-1" name="rating" value="1">
+            <span class="rating-form__circle">1</span>
+          </label>
+          <label class="rating-form__label" for="rating-2">
+            <input type="radio" class="rating-form__input" id="rating-2" name="rating" value="2">
+            <span class="rating-form__circle">2</span>
+          </label>
+          <label class="rating-form__label" for="rating-3">
+            <input type="radio" class="rating-form__input" id="rating-3" name="rating" value="3">
+            <span class="rating-form__circle">3</span>
+          </label>
+          <label class="rating-form__label" for="rating-4">
+            <input type="radio" class="rating-form__input" id="rating-4" name="rating" value="4">
+            <span class="rating-form__circle">4</span>
+          </label>
+          <label class="rating-form__label" for="rating-5">
+            <input type="radio" class="rating-form__input" id="rating-5" name="rating" value="5">
+            <span class="rating-form__circle">5</span>
+          </label>
+        </fieldset>
+        <button type="submit" id="btnSubmit" class="rating-form__button rating-form__button--primary" disabled>Submit</button>
+      </form>
+    </div>
 
-  How did we do?
+    <div class="thanks-card card hidden">
+      <img src="./images/illustration-thank-you.svg" alt="Thanks state illustration">
+      <div class="rating-container">
+      </div>
+      <h2 class="title">Thank you!</h2>
+      <p class="description">We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+    </div>
+  </main>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
+  <script src="./script.js"></script>
 </body>
 </html>
